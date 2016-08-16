@@ -25,6 +25,7 @@
                     <!--<li><a href="{{ url('/equipamentos') }}">Cliente</a></li>
                     <li><a href="{{ url('/equipamentos') }}">Equipamentos</a></li>-->
                 @else
+                
                 @endif
 
                 </ul>
@@ -33,8 +34,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Registrar</a></li>
+                        <li><a class="glyphicon glyphicon-cog" href="{{ url('/login') }}"></a></li>
+                        <!--<li><a href="{{ url('/register') }}">Registrar</a></li>-->
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">

@@ -8,6 +8,15 @@ use App\Http\Requests;
 
 class Patrimonio extends Controller
 {
+    
+    public function home()
+    {
+        $patrimonios = \App\Patrimo::paginate(10);
+        return view('patrimonios.home', compact('patrimonios'));
+    }
+
+
+
     public function index()
     {
     	$patrimonios = \App\Patrimo::paginate(10);

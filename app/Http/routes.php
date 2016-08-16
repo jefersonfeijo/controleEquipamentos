@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/exemplos', function () {
     
 	//array add()
 
@@ -71,14 +71,9 @@ Route::get('/', function () {
 
 
 
-
-
-
-    return view('welcome');
 });
 
-
-
+Route::get('/', ['uses'=>'Patrimonio@home', 'as' =>'home.index']);
 
 Route::auth();
 
