@@ -13,8 +13,12 @@
                 </ol>
 
                 <div class="panel-body">
+
+                @if(!Auth::guest())
                 
                     <p align="right"><a class="btn btn-success" href="{{route('cadastrarpatrimonios.index')}}">Cadastrar Património</a> </p>
+
+                @endif
 
                 </div>
 
@@ -33,7 +37,12 @@
                                 <th>LOCAL</th>
                                 <th>ATUALIZADO</th>
                                 <th>STATUS</th>
+                                
+                               @if (!Auth::guest())
+
                                 <th>AÇÃO</th>
+
+                                @endif
                             </tr>
                         </thead>
                         
@@ -58,11 +67,16 @@
                                              <a class="btn glyphicon glyphicon-remove btn-danger"></a>
                                     @endif
                                 
-                                </td>                                
+                                </td> 
+
+                                @if (!Auth::guest())
+
                                 <td align="center">
                                     <a class="btn glyphicon glyphicon-cog btn-info"href="{{ route('editarpatrimonios.editar',$patrimonio->id)}}"></a>
                                     <a class="btn glyphicon glyphicon-trash btn-danger" href="javascript:(confirm('Deseja Deletar este Patrimônio?') ? window.location.href=' {{route ('deletarpatrimonios.deletar',$patrimonio->id)}}' : '')"></a>
                                 </td>
+                                
+                                @endif
                             </tr>
                             @endforeach
                           

@@ -73,11 +73,9 @@ Route::get('/exemplos', function () {
 
 });
 
-Route::get('/', ['uses'=>'Patrimonio@home', 'as' =>'home.index']);
+Route::get('/', ['uses'=>'Patrimonio@index', 'as' =>'listapatrimonios.index']);
 
 Route::auth();
-
-Route::get('/home', 'HomeController@index');
 
 Route::get('/patrimonios', ['uses'=>'Patrimonio@index', 'as' =>'listapatrimonios.index']);
 

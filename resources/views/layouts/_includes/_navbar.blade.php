@@ -21,7 +21,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                 @if (!Auth::guest())
-                    <li><a href="{{ url('/patrimonios') }}">Patrimônios</a></li>
+                    <!--<li><a href="{{ url('/patrimonios') }}">Patrimônios</a></li>-->
                     <!--<li><a href="{{ url('/equipamentos') }}">Cliente</a></li>
                     <li><a href="{{ url('/equipamentos') }}">Equipamentos</a></li>-->
                 @else
