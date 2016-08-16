@@ -11,8 +11,9 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Controle Patrimônios                    
+                
+                <a class="" href="{{ url('/') }}">
+                  <img src="http://dev.engetronics.com.br/wp-content/uploads/2013/09/logo-engetronics1.png">                    
                 </a>
             </div>
 
